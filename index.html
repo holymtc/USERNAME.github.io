@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ارائه نهایی جلسه دفاع پایان‌نامه کارشناسی ارشد ـ مهرماه ۱۴۰۵">
+  <title>ارائه دفاع پایان‌نامه | محدثه طالبی‌پور چرخابی</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: {
+        fontFamily: { sans: ['Vazirmatn', 'sans-serif'] },
+        colors: { brand: { 50:'#f0f7ff', 100:'#e0effe', 500:'#2563eb', 600:'#2563eb', 700:'#1d4ed8', 800:'#1e40af', 900:'#1e3a8a', 950:'#0f172a' } }
+      }}
+    };
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family:'Vazirmatn',sans-serif; transition:background-color .25s,color .25s; }
+    .glass-card { background:rgba(255,255,255,.88); backdrop-filter:blur(12px); border:1px solid rgba(226,232,240,.8); }
+    .dark .glass-card { background:rgba(15,23,42,.88); border:1px solid rgba(51,65,85,.65); }
+    .glow-effect { box-shadow:0 0 25px -5px rgba(37,99,235,.22); }
+    .dark .glow-effect { box-shadow:0 0 25px -5px rgba(59,130,246,.28); }
+    .section-anchor { scroll-margin-top: 100px; }
+    .theory-btn.active { background:#2563eb; color:white; }
+    ::-webkit-scrollbar { width:8px; }
+    ::-webkit-scrollbar-track { background:rgba(15,23,42,.1); }
+    ::-webkit-scrollbar-thumb { background:#2563eb; border-radius:4px; }
+    .presenter-mode #navbar { display:none; }
+    .presenter-mode main { max-width: 1100px; }
+    .presenter-mode .section-shell { padding-top:2.25rem; padding-bottom:2.25rem; }
+    .presenter-mode .content-card { font-size:1.05rem; }
+    .presenter-mode .hide-in-focus { display:none !important; }
+    @media print {
+      html, body { background:white !important; color:#0f172a !important; }
+      #navbar, #progressBarWrap, #searchModal, .no-print, footer .no-print { display:none !important; }
+      .glass-card, .dark .glass-card { background:white !important; color:#0f172a !important; border:1px solid #cbd5e1 !important; box-shadow:none !important; break-inside:avoid; }
+      .dark, .dark body, .dark p, .dark h1, .dark h2, .dark h3, .dark h4, .dark li, .dark span { color:#0f172a !important; }
+      .section-shell { padding-top:1rem !important; padding-bottom:1rem !important; }
+      a { text-decoration:none !important; }
+      .print-break { break-before:page; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 antialiased selection:bg-brand-500 selection:text-white pb-10">
+  <div id="progressBarWrap" class="fixed top-0 left-0 right-0 h-1 bg-slate-200 dark:bg-slate-800 z-50"><div id="progressBar" class="h-full bg-gradient-to-r from-brand-500 via-amber-500 to-emerald-500 w-0 transition-all duration-150"></div></div>
+
+  <nav id="navbar" class="sticky top-1 z-40 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 mt-2 transition-all duration-300 no-print">
+    <div class="glass-card rounded-2xl shadow-lg px-3 sm:px-4 py-3 flex items-center justify-between gap-3">
+      <div class="flex items-center gap-2 shrink-0">
+        <div class="bg-brand-600 text-white p-2 rounded-xl shadow-md"><i data-lucide="graduation-cap" class="w-5 h-5"></i></div>
+        <span class="font-black text-xs sm:text-sm hidden lg:inline">جلسه دفاع پایان‌نامه ارشد</span>
+      </div>
+      <div class="flex gap-1 sm:gap-2 text-xs font-semibold text-slate-600 dark:text-slate-300 overflow-x-auto py-1">
+        <a href="#problem" class="nav-link px-2 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">مسئله</a>
+        <a href="#questions" class="nav-link px-2 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">اهداف و پرسش‌ها</a>
+        <a href="#timeline" class="nav-link px-2 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">مسیر پژوهش</a>
+        <a href="#methodology" class="nav-link px-2 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">روش</a>
+        <a href="#ai-transparency" class="nav-link px-2 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">شفافیت AI</a>
+        <a href="#delinquency" class="nav-link px-2 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">بزهکاری</a>
+        <a href="#victimization" class="nav-link px-2 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">بزه‌دیدگی</a>
+        <a href="#answers" class="nav-link px-2 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">نتایج</a>
+      </div>
+      <div class="flex items-center gap-1 shrink-0">
+        <button onclick="toggleSearch()" aria-label="جست‌وجو" title="جست‌وجو" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700"><i data-lucide="search" class="w-4 h-4"></i></button>
+        <button onclick="toggleFocusMode()" aria-label="حالت ارائه" title="حالت ارائه" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700"><i data-lucide="maximize" class="w-4 h-4"></i></button>
+        <button onclick="toggleDarkMode()" aria-label="تغییر تم" title="تغییر تم" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700"><i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i><i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i></button>
+        <button onclick="window.print()" aria-label="چاپ" title="چاپ یا ذخیره PDF" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700"><i data-lucide="printer" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="searchModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden items-start justify-center pt-20 px-4 no-print">
+    <div class="glass-card w-full max-w-xl rounded-2xl p-4 shadow-2xl">
+      <div class="flex items-center gap-3 bg-slate-100 dark:bg-slate-800 px-4 py-3 rounded-xl">
+        <i data-lucide="search" class="w-5 h-5 text-slate-400"></i>
+        <input type="text" id="searchInput" oninput="filterContent()" placeholder="جست‌وجوی موضوع، نظریه یا ماده قانونی..." class="bg-transparent w-full focus:outline-none text-sm">
+        <button onclick="toggleSearch()" class="text-xs text-slate-500 hover:text-brand-500">بستن</button>
+      </div>
+      <div id="searchResults" class="mt-4 max-h-72 overflow-y-auto space-y-2 text-xs"></div>
+    </div>
+  </div>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- 1. Cover -->
+    <header id="hero" class="section-shell relative pt-10 pb-12 sm:pt-16 sm:pb-16 overflow-hidden text-center section-anchor">
+      <div class="absolute -top-12 right-10 w-44 h-44 rounded-full bg-brand-500/10 blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-0 left-10 w-44 h-44 rounded-full bg-amber-500/10 blur-3xl pointer-events-none"></div>
+      <div class="relative z-10">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-500/10 dark:bg-brand-500/20 text-brand-600 dark:text-brand-300 text-xs sm:text-sm font-semibold mb-6 border border-brand-500/20">
+          <i data-lucide="award" class="w-4 h-4"></i><span>دانشگاه شاهد • دانشکده علوم انسانی • کارشناسی ارشد حقوق جزا و جرم‌شناسی</span>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-3">ارائه جلسه دفاع پایان‌نامه</p>
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black leading-relaxed sm:leading-snug mb-7 text-slate-900 dark:text-white tracking-tight">
+          راهکارهای پیشگیری از بزهکاری ـ بزه‌دیدگیِ<br class="hidden sm:inline"> کودکان دارای اختلال کم‌توجهی/بیش‌فعالی
+        </h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-8 text-right">
+          <div class="glass-card p-4 sm:p-5 rounded-2xl shadow-sm flex items-center gap-4">
+            <div class="p-3 bg-brand-500/10 rounded-2xl text-brand-600 dark:text-brand-400"><i data-lucide="user-round" class="w-6 h-6"></i></div>
+            <div><p class="text-xs text-slate-500 dark:text-slate-400">نگارنده</p><p class="font-bold">محدثه طالبی‌پور چرخابی</p></div>
+          </div>
+          <div class="glass-card p-4 sm:p-5 rounded-2xl shadow-sm flex items-center gap-4">
+            <div class="p-3 bg-amber-500/10 rounded-2xl text-amber-600 dark:text-amber-400"><i data-lucide="bookmark-check" class="w-6 h-6"></i></div>
+            <div><p class="text-xs text-slate-500 dark:text-slate-400">استاد راهنما</p><p class="font-bold">دکتر مسعود مصطفی‌پور</p></div>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto">
+          <div class="glass-card p-4 rounded-2xl glow-effect"><div class="text-2xl font-black text-brand-600 dark:text-brand-400">۲ محور</div><div class="text-xs text-slate-500 dark:text-slate-400 mt-1">بزهکاری و بزه‌دیدگی</div></div>
+          <div class="glass-card p-4 rounded-2xl glow-effect"><div class="text-2xl font-black text-emerald-600 dark:text-emerald-400">۳ سطح</div><div class="text-xs text-slate-500 dark:text-slate-400 mt-1">تحلیل پژوهش</div></div>
+          <div class="glass-card p-4 rounded-2xl glow-effect"><div class="text-2xl font-black text-amber-600 dark:text-amber-400">۵ سطح</div><div class="text-xs text-slate-500 dark:text-slate-400 mt-1">مداخله و حمایت</div></div>
+          <div class="glass-card p-4 rounded-2xl glow-effect"><div class="text-2xl font-black text-purple-600 dark:text-purple-400">غیرمیدانی</div><div class="text-xs text-slate-500 dark:text-slate-400 mt-1">پژوهش اسنادی</div></div>
+        </div>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-5">تاریخ جلسه دفاع: مهرماه ۱۴۰۵ <span class="mx-1">•</span> تاریخ درج‌شده در پایان‌نامه: اردیبهشت ۱۴۰۴</p>
+      </div>
+    </header>
+
+    <!-- 2. Problem -->
+    <section id="problem" class="section-shell py-10 section-anchor">
+      <div class="text-center mb-8"><span class="px-3 py-1 bg-brand-500/10 text-brand-600 dark:text-brand-400 rounded-full font-bold text-xs inline-block mb-2">اسلاید ۲</span><h2 class="text-2xl sm:text-3xl font-extrabold">بیان مسئله و تبیین موضوع پژوهش</h2><p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">مسئله در پیوند میان ویژگی‌های کودک، محیط رشد و نظام حمایت</p></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+        <article class="glass-card content-card p-5 rounded-2xl border-r-4 border-r-brand-600"><div class="flex items-center gap-2 font-bold text-brand-600 dark:text-brand-400 mb-3"><i data-lucide="brain" class="w-5 h-5"></i>ویژگی‌های فردی</div><p class="text-sm leading-7">برخی کودکان ممکن است در توجه، کنترل بازداری، تکانشگری، خودتنظیمی، تنظیم هیجان یا تعامل اجتماعی با دشواری روبه‌رو باشند. وجود این ویژگی‌ها به‌تنهایی مسیر رفتاری کودک را تعیین نمی‌کند.</p></article>
+        <article class="glass-card content-card p-5 rounded-2xl border-r-4 border-r-amber-500"><div class="flex items-center gap-2 font-bold text-amber-600 dark:text-amber-400 mb-3"><i data-lucide="git-branch" class="w-5 h-5"></i>دو محور مستقل</div><p class="text-sm leading-7">در محور بزهکاری، مسیرها و عوامل خطر بررسی می‌شوند؛ در محور بزه‌دیدگی، قلدری، قلدری سایبری، کودک‌آزاری، غفلت و آسیب در فرایندهای رسمی مورد توجه قرار می‌گیرند.</p></article>
+        <article class="glass-card content-card p-5 rounded-2xl border-r-4 border-r-emerald-500"><div class="flex items-center gap-2 font-bold text-emerald-600 dark:text-emerald-400 mb-3"><i data-lucide="compass" class="w-5 h-5"></i>مسئله محوری</div><p class="text-sm leading-7">چگونه می‌توان عوامل و مسیرهای مرتبط با بزهکاری و بزه‌دیدگی را شناخت و با استفاده از ظرفیت‌های حقوقی و نهادی ایران، راهکارهای متناسب برای پیشگیری و حمایت ارائه کرد؟</p></article>
+      </div>
+      <div class="rounded-2xl bg-gradient-to-l from-brand-900 via-brand-800 to-slate-900 text-white p-5 sm:p-6 shadow-lg"><div class="flex gap-3 items-start"><i data-lucide="shield-check" class="w-6 h-6 text-amber-300 shrink-0 mt-1"></i><div><h3 class="font-bold text-amber-200 mb-2">اصل محوری پایان‌نامه</h3><p class="text-sm sm:text-base leading-8">وجود اختلال کم‌توجهی/بیش‌فعالی به‌تنهایی علت قطعی بزهکاری یا بزه‌دیدگی نیست. تحلیل باید ویژگی‌های فردی را در کنار شرایط خانواده، مدرسه، همسالان، محیط اجتماعی و نحوه مواجهه نهادها قرار دهد.</p></div></div></div>
+    </section>
+
+    <!-- 3. Necessity and gap -->
+    <section id="necessity" class="section-shell py-10 section-anchor print-break">
+      <div class="text-center mb-8"><span class="px-3 py-1 bg-brand-500/10 text-brand-600 dark:text-brand-400 rounded-full font-bold text-xs inline-block mb-2">اسلاید ۳</span><h2 class="text-2xl sm:text-3xl font-extrabold">اهمیت، ضرورت و خلأ پژوهش</h2></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <article class="glass-card content-card p-5 rounded-2xl"><div class="text-brand-600 dark:text-brand-400 mb-3"><i data-lucide="book-open-check" class="w-6 h-6"></i></div><h3 class="font-bold mb-2">ضرورت نظری</h3><ul class="list-disc pr-5 space-y-2 text-sm leading-7"><li>تفکیک تشخیص بالینی از عامل خطر، سازوکار و پیامد.</li><li>جداکردن مفاهیم بزهکاری و بزه‌دیدگی.</li><li>تحلیل تعامل ویژگی‌های فردی و عوامل محیطی.</li></ul></article>
+        <article class="glass-card content-card p-5 rounded-2xl"><div class="text-amber-600 dark:text-amber-400 mb-3"><i data-lucide="hand-heart" class="w-6 h-6"></i></div><h3 class="font-bold mb-2">ضرورت کاربردی</h3><p class="text-sm leading-7">شناسایی نقاط قابل مداخله برای ارزیابی و ارجاع زودهنگام، حمایت از کودک و خانواده، حفظ پیوند مدرسه‌ای، کاهش موقعیت‌های خطر و جلوگیری از آسیب مجدد در فرایند رسمی.</p></article>
+        <article class="glass-card content-card p-5 rounded-2xl"><div class="text-emerald-600 dark:text-emerald-400 mb-3"><i data-lucide="puzzle" class="w-6 h-6"></i></div><h3 class="font-bold mb-2">خلأ مورد توجه</h3><p class="text-sm leading-7">در پیشینه بررسی‌شده، بزهکاری و بزه‌دیدگی غالباً در مطالعات جداگانه بررسی شده‌اند. این پایان‌نامه هر دو محور را تحلیل و سپس یافته‌ها را با ظرفیت‌های پیشگیرانه و حمایتی نظام ایران مرتبط می‌کند.</p></article>
+      </div>
+      <p class="text-xs text-slate-500 dark:text-slate-400 mt-4">حدّ ادعا: نوآوری در پیوند تحلیلی دو محور است؛ پایان‌نامه ادعای اثبات «نخستین پژوهش»، ارائه نظریه جدید یا اثربخشی تجربیِ یک مدل را مطرح نمی‌کند.</p>
+    </section>
+
+    <!-- 4. Objectives and questions -->
+    <section id="questions" class="section-shell py-10 section-anchor">
+      <div class="text-center mb-8"><span class="px-3 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full font-bold text-xs inline-block mb-2">اسلاید ۴ و ۵</span><h2 class="text-2xl sm:text-3xl font-extrabold">اهداف و پرسش‌های پژوهش</h2></div>
+      <div class="glass-card p-5 sm:p-7 rounded-3xl border-r-4 border-r-emerald-500 mb-5"><p class="text-xs text-emerald-600 dark:text-emerald-400 font-bold mb-2">هدف اصلی</p><p class="font-semibold leading-8">ارائه راهکارهای پیشگیرانه و حمایتیِ منسجم برای کاهش بزهکاری و بزه‌دیدگی کودکان دارای اختلال کم‌توجهی/بیش‌فعالی با توجه به شرایط فردی و محیطی آنان و ظرفیت‌های نظام عدالت کیفری ایران.</p></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-7">
+        <article class="glass-card p-5 rounded-2xl"><span class="w-8 h-8 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold mb-3">۱</span><h3 class="font-bold mb-2">هدف فرعی اول</h3><p class="text-sm leading-7">بررسی عوامل مرتبط با بزهکاری در سطح فرد، خانواده، مدرسه، همسالان، جامعه و نهادها و شناسایی نقاط قابل مداخله.</p></article>
+        <article class="glass-card p-5 rounded-2xl"><span class="w-8 h-8 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold mb-3">۲</span><h3 class="font-bold mb-2">هدف فرعی دوم</h3><p class="text-sm leading-7">بررسی شرایط و موقعیت‌های مرتبط با بزه‌دیدگی و شناسایی راه‌های کاهش بزه‌دیدگی اولیه و ثانویه و حمایت بهتر از کودکان.</p></article>
+        <article class="glass-card p-5 rounded-2xl"><span class="w-8 h-8 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold mb-3">۳</span><h3 class="font-bold mb-2">هدف فرعی سوم</h3><p class="text-sm leading-7">ارائه راهکارهای پیشگیرانه، حمایتی و اصلاحی و پیشنهادهای سیاست جنایی با توجه به یافته‌ها و امکانات تقنینی، اجرایی و نهادی ایران.</p></article>
+      </div>
+      <div class="space-y-4">
+        <div class="glass-card p-5 rounded-2xl border-r-4 border-r-brand-600"><h3 class="font-bold text-brand-600 dark:text-brand-400 mb-2">پرسش اصلی</h3><p class="text-sm leading-8">با توجه به زمینه‌ها و مسیرهای مرتبط با بزهکاری و بزه‌دیدگی، ظرفیت‌ها و کاستی‌های موجود در نظام عدالت کیفری ایران، چه راهکارهای پیشگیرانه و حمایتی برای کاهش بزهکاری و بزه‌دیدگی کودکان دارای اختلال کم‌توجهی/بیش‌فعالی می‌توان ارائه کرد؟</p></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <article class="glass-card p-4 rounded-2xl"><h4 class="font-bold text-sm mb-2">پرسش فرعی ۱</h4><p class="text-sm leading-7">مهم‌ترین زمینه‌ها و مسیرهای مرتبط با بزهکاری کودکان دارای اختلال کم‌توجهی/بیش‌فعالی کدام‌اند و نظام ایران برای پیشگیری از آن‌ها چه امکاناتی دارد؟</p></article>
+          <article class="glass-card p-4 rounded-2xl"><h4 class="font-bold text-sm mb-2">پرسش فرعی ۲</h4><p class="text-sm leading-7">مهم‌ترین زمینه‌ها و موقعیت‌های بزه‌دیدگی این کودکان کدام‌اند و برای کاهش آن‌ها چه حمایت‌ها و اقدامات پیشگیرانه‌ای در نظام ایران وجود دارد؟</p></article>
+          <article class="glass-card p-4 rounded-2xl"><h4 class="font-bold text-sm mb-2">پرسش فرعی ۳</h4><p class="text-sm leading-7">با توجه به یافته‌های مربوط به بزهکاری و بزه‌دیدگی و امکانات و کاستی‌های موجود در نظام ایران، چه راهکارهای پیشگیرانه، حمایتی و اصلاحی و سیاست‌های جنایی را می‌توان پیشنهاد کرد؟</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Restored: Research timeline and declared AI-assisted stages -->
+    <section id="timeline" class="section-shell py-10 section-anchor print-break">
+      <div class="text-center mb-8">
+        <span class="px-3 py-1 bg-brand-500/10 text-brand-600 dark:text-brand-400 rounded-full font-bold text-xs inline-block mb-2">مسیر پژوهش</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold">سیر انجام پژوهش و جایگاه ابزارهای هوش مصنوعی</h2>
+        <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">تفکیک کمک ابزاری از جست‌وجو، ارزیابی منابع، تحلیل و مسئولیت علمی پژوهشگر</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <article class="glass-card p-4 rounded-2xl text-center border-t-4 border-t-brand-500">
+          <span class="w-9 h-9 rounded-xl bg-brand-500 text-white flex items-center justify-center font-black text-sm mx-auto mb-3">۱</span>
+          <h3 class="font-bold text-sm mb-2">طرح مسئله و چارچوب</h3>
+          <p class="text-xs leading-6 text-slate-600 dark:text-slate-300">تعیین موضوع، هدف، پرسش‌های پژوهش و قلمرو حقوقی ـ جرم‌شناختی.</p>
+        </article>
+        <article class="glass-card p-4 rounded-2xl text-center border-t-4 border-t-amber-500">
+          <span class="w-9 h-9 rounded-xl bg-amber-500 text-white flex items-center justify-center font-black text-sm mx-auto mb-3">۲</span>
+          <h3 class="font-bold text-sm mb-2">دستیاری هوش مصنوعی</h3>
+          <p class="text-xs leading-6 text-slate-600 dark:text-slate-300">کمک در پیشنهاد کلیدواژه‌ها، ساختاربندی مقدماتی، ترجمه تخصصی متون و تلخیص اولیه؛ مشروط به بررسی و اصلاح خروجی‌ها.</p>
+        </article>
+        <article class="glass-card p-4 rounded-2xl text-center border-t-4 border-t-purple-500">
+          <span class="w-9 h-9 rounded-xl bg-purple-500 text-white flex items-center justify-center font-black text-sm mx-auto mb-3">۳</span>
+          <h3 class="font-bold text-sm mb-2">جست‌وجو و گزینش منابع</h3>
+          <p class="text-xs leading-6 text-slate-600 dark:text-slate-300">جست‌وجوی منابع علمی، از جمله در Google Scholar، و انتخاب منابع بر اساس ارتباط، اعتبار و قابلیت استناد.</p>
+        </article>
+        <article class="glass-card p-4 rounded-2xl text-center border-t-4 border-t-emerald-500">
+          <span class="w-9 h-9 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-black text-sm mx-auto mb-3">۴</span>
+          <h3 class="font-bold text-sm mb-2">راستی‌آزمایی و تحلیل</h3>
+          <p class="text-xs leading-6 text-slate-600 dark:text-slate-300">بررسی متون و ارجاعات، تطبیق ادعاهای حقوقی با منابع معتبر و تحلیل مفهومی، حقوقی و جرم‌شناختی.</p>
+        </article>
+        <article class="glass-card p-4 rounded-2xl text-center border-t-4 border-t-brand-800">
+          <span class="w-9 h-9 rounded-xl bg-brand-800 text-white flex items-center justify-center font-black text-sm mx-auto mb-3">۵</span>
+          <h3 class="font-bold text-sm mb-2">جمع‌بندی پژوهشگر</h3>
+          <p class="text-xs leading-6 text-slate-600 dark:text-slate-300">تعیین نهایی استدلال‌ها، پاسخ به پرسش‌ها، نتیجه‌گیری و پیشنهادها بر عهده پژوهشگر انسانی است.</p>
+        </article>
+      </div>
+      <div class="mt-5 p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-sm leading-7">
+        <strong class="text-amber-700 dark:text-amber-300">مرزبندی مهم:</strong>
+        ابزار هوش مصنوعی، دستیار فرایند پژوهش است؛ نه جایگزین منبع علمی، بررسی مستقل منابع یا مسئولیت پژوهشگر در برابر دقت و اصالت محتوای نهایی.
+      </div>
+    </section>
+
+    <!-- 5. Methodology -->
+    <section id="methodology" class="section-shell py-10 section-anchor print-break">
+      <div class="text-center mb-8"><span class="px-3 py-1 bg-brand-500/10 text-brand-600 dark:text-brand-400 rounded-full font-bold text-xs inline-block mb-2">اسلاید ۶</span><h2 class="text-2xl sm:text-3xl font-extrabold">روش‌شناسی پژوهش</h2><p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">چه چیزی بررسی شده و نتایج چگونه به دست آمده‌اند؟</p></div>
+      <div class="glass-card rounded-3xl overflow-hidden">
+        <div class="overflow-x-auto"><table class="w-full text-sm"><thead class="bg-brand-500/10"><tr><th class="p-4 text-right font-bold">مؤلفه</th><th class="p-4 text-right font-bold">توصیف مطابق پایان‌نامه</th></tr></thead><tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+          <tr><td class="p-4 font-semibold">ماهیت پژوهش</td><td class="p-4 leading-7">توصیفی ـ تحلیلی</td></tr>
+          <tr><td class="p-4 font-semibold">گردآوری اطلاعات</td><td class="p-4 leading-7">اسنادی و کتابخانه‌ای</td></tr>
+          <tr><td class="p-4 font-semibold">منابع اصلی</td><td class="p-4 leading-7">قوانین و مقررات، منابع فقهی و حقوقی، آثار علمی و مطالعات روان‌شناختی و جرم‌شناختی مرتبط؛ با استفاده تکمیلی از برخی منابع خارجی</td></tr>
+          <tr><td class="p-4 font-semibold">معیار انتخاب منابع</td><td class="p-4 leading-7">ارتباط با مسئله و پرسش‌های پژوهش، اعتبار و قابلیت استناد؛ در مباحث فقهی و حقوقی، اولویت با متون اصلی و رسمی است.</td></tr>
+          <tr><td class="p-4 font-semibold">سطوح تحلیل</td><td class="p-4 leading-7">تحلیل مفهومی؛ تحلیل حقوقی و هنجاری؛ تحلیل جرم‌شناختی</td></tr>
+          <tr><td class="p-4 font-semibold">قلمرو حقوقی</td><td class="p-4 leading-7">تمرکز بر نظام عدالت کیفری ایران؛ مطالعه تطبیقی، روش مستقل پژوهش نیست.</td></tr>
+          <tr><td class="p-4 font-semibold">حدود استنتاج</td><td class="p-4 leading-7">پژوهش میدانی نیست؛ جامعه آماری، نمونه‌گیری، پرسشنامه و مصاحبه ندارد. اثربخشی تجربی مداخلات سنجیده نشده و رابطه علّی قطعی اثبات نمی‌شود.</td></tr>
+        </tbody></table></div>
+      </div>
+    </section>
+
+    <!-- Restored: AI transparency and researcher responsibility -->
+    <section id="ai-transparency" class="section-shell py-10 section-anchor print-break">
+      <div class="text-center mb-8">
+        <span class="px-3 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full font-bold text-xs inline-block mb-2">شفافیت روش پژوهش</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold">شفافیت استفاده از هوش مصنوعی</h2>
+        <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">شرح نقش ابزارهای کمکی و تفکیک آن از مسئولیت علمی پژوهشگر</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+        <article class="glass-card p-5 sm:p-6 rounded-2xl border-r-4 border-r-amber-500">
+          <h3 class="font-bold text-lg mb-4 flex items-center gap-2"><i data-lucide="bot" class="w-5 h-5 text-amber-500"></i>کاربردهای اعلام‌شده ابزار هوش مصنوعی</h3>
+          <ul class="space-y-3 text-sm leading-7">
+            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-1"></i><span>پیشنهاد کلیدواژه‌ها و کمک به ساختاربندی مقدماتی موضوع.</span></li>
+            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-1"></i><span>ترجمه تخصصی متون و تهیه تلخیص اولیه برای تسهیل مطالعه منابع.</span></li>
+            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-1"></i><span>کمک در سازمان‌دهی اولیه مطالب؛ خروجی ابزار به‌تنهایی مرجع علمی یا دلیل حقوقی محسوب نمی‌شود.</span></li>
+          </ul>
+        </article>
+        <article class="glass-card p-5 sm:p-6 rounded-2xl border-r-4 border-r-brand-600">
+          <h3 class="font-bold text-lg mb-4 flex items-center gap-2"><i data-lucide="shield-check" class="w-5 h-5 text-brand-500"></i>مسئولیت پژوهشگر انسانی</h3>
+          <ul class="space-y-3 text-sm leading-7">
+            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-1"></i><span>انتخاب نهایی منابع بر اساس ارتباط، اعتبار و قابلیت استناد.</span></li>
+            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-1"></i><span>راستی‌آزمایی ارجاعات، مواد قانونی، گزاره‌های factual و ترجمه‌ها در برابر منابع معتبر.</span></li>
+            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-1"></i><span>ارزیابی انتقادی خروجی‌ها و مسئولیت نهایی استدلال‌ها، تحلیل جرم‌شناختی، نتیجه‌گیری و پیشنهادها.</span></li>
+            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-1"></i><span>رعایت اصول اصالت علمی، شفافیت، محرمانگی و مقررات دانشگاهی مربوط به استفاده از ابزارهای هوش مصنوعی.</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. Conceptual framework -->
+    <section id="framework" class="section-shell py-10 section-anchor">
+      <div class="text-center mb-8"><span class="px-3 py-1 bg-brand-500/10 text-brand-600 dark:text-brand-400 rounded-full font-bold text-xs inline-block mb-2">اسلاید ۷</span><h2 class="text-2xl sm:text-3xl font-extrabold">چارچوب مفهومی و نظری</h2></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <article class="glass-card p-5 sm:p-6 rounded-2xl"><h3 class="font-bold text-lg mb-4 flex items-center gap-2"><i data-lucide="git-compare" class="w-5 h-5 text-brand-500"></i>تمایزهای مفهومی کلیدی</h3><ul class="space-y-3 text-sm leading-7"><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0 mt-1"></i><span>تشخیص بالینی ≠ بزهکاری یا بزه‌دیدگی.</span></li><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0 mt-1"></i><span>عامل خطر ≠ علت قطعی؛ ویژگی فردی ≠ پیامد نهایی.</span></li><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0 mt-1"></i><span>بزهکاری ≠ جرم ثبت‌شده در نظام رسمی.</span></li><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0 mt-1"></i><span>خطر بزه‌دیدگی ≠ تحقق بالفعل بزه‌دیدگی.</span></li><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0 mt-1"></i><span>بزه‌دیدگی اولیه ≠ بزه‌دیدگی ثانویه در فرایند رسمی.</span></li></ul></article>
+        <article class="glass-card p-5 sm:p-6 rounded-2xl"><h3 class="font-bold text-lg mb-4 flex items-center gap-2"><i data-lucide="layers" class="w-5 h-5 text-amber-500"></i>چارچوب‌های نظری در فصل دوم و سوم</h3><div class="space-y-3 text-sm leading-7"><div class="p-3 rounded-xl bg-white/50 dark:bg-slate-800/50"><strong>فصل دوم ـ بزهکاری:</strong> نظریه فشار عمومی؛ نظریه پیوند اجتماعی؛ نظریه یادگیری اجتماعی آکرز؛ رویکرد تحولی مافیت.</div><div class="p-3 rounded-xl bg-white/50 dark:bg-slate-800/50"><strong>فصل سوم ـ بزه‌دیدگی:</strong> نظریه شتاب‌دهندگی بزه‌دیدگی؛ رویکرد فعالیت‌های روزمره در تبیین فرصت بزه‌دیدگی.</div><div class="text-xs text-slate-500 dark:text-slate-400">این چارچوب‌ها ابزار تحلیل‌اند و به‌تنهایی رابطه علّی یا پیش‌بینی قطعی درباره فرد مشخص اثبات نمی‌کنند.</div></div></article>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-5">
+        <article class="glass-card p-4 rounded-2xl"><h3 class="font-bold text-sm text-emerald-600 dark:text-emerald-400 mb-2">پیشگیری اولیه</h3><p class="text-xs leading-6">توجه به شرایط عمومی اجتماعی، اقتصادی و محیطیِ زمینه‌ساز جرم.</p></article>
+        <article class="glass-card p-4 rounded-2xl"><h3 class="font-bold text-sm text-amber-600 dark:text-amber-400 mb-2">پیشگیری ثانویه</h3><p class="text-xs leading-6">تمرکز بر افراد، مکان‌ها یا شرایطی که در معرض خطر بیشتری قرار دارند؛ همراه با ارزیابی و حمایت متناسب.</p></article>
+        <article class="glass-card p-4 rounded-2xl"><h3 class="font-bold text-sm text-rose-600 dark:text-rose-400 mb-2">پیشگیری ثالثیه</h3><p class="text-xs leading-6">مداخله در شرایطی که مسئله جرم شکل گرفته و هدف، کاهش تداوم یا تکرار و تشدید پیامدهاست.</p></article>
+      </div>
+      <div class="glass-card p-5 rounded-2xl mt-5"><h3 class="font-bold mb-3">حدود مفاهیم و مبانی فقهی</h3><div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm leading-7"><div><strong class="text-brand-600 dark:text-brand-400">حدود مفاهیم:</strong> مطابق تعریف قانونی بررسی‌شده در پایان‌نامه، «طفل» کسی است که به سن بلوغ شرعی نرسیده و «نوجوان» فرد زیر هجده سال کامل شمسی است که به بلوغ شرعی رسیده است؛ پس کاربرد «کودک» در مطالعات علمی را نباید بی‌واسطه با مفهوم حقوقی «طفل» یکسان گرفت. ADHD در پژوهش، وضعیتی رشدی ـ عصبی است؛ بزهکاری مفهومی جرم‌شناختی دارد؛ و خطر بزه‌دیدگی با بزه‌دیده بالفعل بودن یکسان نیست.</div><div><strong class="text-amber-600 dark:text-amber-400">مبانی فقهی:</strong> پژوهش به تمایز تمییز، بلوغ، رشد و کمال عقل، قاعده نفی حرج و مصلحت طفل می‌پردازد. این مبانی برای تأکید بر ارزیابی وضعیت واقعی و حمایت متناسب از کودک به کار می‌روند؛ نه برای استنباط یک حکم خودکار یا معافیت خاص به دلیل تشخیص ADHD.</div></div></div>
+    </section>
+
+    <!-- 7. Legal basis -->
+    <section id="law" class="section-shell py-10 section-anchor print-break">
+      <div class="text-center mb-8"><span class="px-3 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full font-bold text-xs inline-block mb-2">اسلاید ۷ ـ مستندات حقوقی</span><h2 class="text-2xl sm:text-3xl font-extrabold">مهم‌ترین مبانی حقوقی بررسی‌شده</h2><p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">نمایی فشرده از موادی که در فصل اول تحلیل شده‌اند</p></div>
+      <div class="glass-card rounded-3xl overflow-hidden"><div class="overflow-x-auto"><table class="w-full text-sm"><thead class="bg-amber-500/10"><tr><th class="p-4 text-right">مستند قانونی</th><th class="p-4 text-right">ارتباط با موضوع پژوهش</th></tr></thead><tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+        <tr><td class="p-4 font-semibold">مواد ۱۴۶ و ۱۴۷ قانون مجازات اسلامی</td><td class="p-4 leading-7">وضعیت نابالغ و معیار سن بلوغ در چارچوب قانون.</td></tr>
+        <tr><td class="p-4 font-semibold">مواد ۸۸ و ۸۹ قانون مجازات اسلامی</td><td class="p-4 leading-7">تصمیم‌ها و واکنش‌های ویژه درباره اطفال و نوجوانان در قلمرو مقرر قانونی.</td></tr>
+        <tr><td class="p-4 font-semibold">ماده ۹۱ قانون مجازات اسلامی</td><td class="p-4 leading-7">در جرائم موجب حد یا قصاص و در شرایط مقرر، توجه به درک ماهیت جرم یا حرمت آن و شبهه در رشد و کمال عقل افراد بالغ کمتر از هجده سال.</td></tr>
+        <tr><td class="p-4 font-semibold">ماده ۱۴۹ قانون مجازات اسلامی</td><td class="p-4 leading-7">معیار اختلال روانی مؤثر بر مسئولیت در صورت فقدان اراده یا قوه تمییز؛ صرف تشخیص ADHD معادل تحقق این معیار نیست.</td></tr>
+        <tr><td class="p-4 font-semibold">مواد ۳، ۶ و ۳۳ قانون حمایت از اطفال و نوجوانان مصوب ۱۳۹۹</td><td class="p-4 leading-7">وضعیت‌های مخاطره‌آمیز، وظایف حمایتی و مداخله برای رفع خطر و کاهش آسیب در حدود و شرایط مقرر قانونی.</td></tr>
+      </tbody></table></div></div>
+      <div class="mt-4 rounded-2xl bg-gradient-to-l from-slate-900 to-brand-900 text-white p-5"><h3 class="font-bold text-amber-200 mb-2">جمع‌بندی حقوقی</h3><p class="text-sm leading-8">پایان‌نامه برای تشخیص ADHD اثر کیفری خودکار قائل نیست. اختلال را نباید خودکار معادل جنون موضوع ماده ۱۴۹ یا موجب معافیت خودکار از مسئولیت دانست. تشخیص تخصصی، ارزیابی وضعیت فردی و تصمیم مرجع صالح بر مبنای معیار قانونی، سه امر متمایزند. همچنین باید میان ظرفیت عمومی حمایت از کودک و وجود حمایت اختصاصی با اثر قانونی مشخص تفاوت گذاشت.</p></div>
+    </section>
+
+    <!-- 8. Literature -->
+    <section id="literature" class="section-shell py-10 section-anchor">
+      <div class="text-center mb-8"><span class="px-3 py-1 bg-brand-500/10 text-brand-600 dark:text-brand-400 rounded-full font-bold text-xs inline-block mb-2">اسلاید ۸</span><h2 class="text-2xl sm:text-3xl font-extrabold">پیشینه پژوهش و سهم مطالعه حاضر</h2></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+        <article class="glass-card p-5 rounded-2xl"><div class="flex items-center gap-3 mb-3"><div class="p-3 rounded-xl bg-brand-500/10 text-brand-500"><i data-lucide="book-open" class="w-5 h-5"></i></div><h3 class="font-bold">مطالعات داخلی</h3></div><p class="text-sm leading-7">بخشی از مطالعات بررسی‌شده به جرم‌شناسی عصب، عوامل زیستی، رابطه ADHD و بزهکاری و ضرورت مداخله زودهنگام پرداخته‌اند؛ بخشی دیگر جنبه‌هایی از حقوق و حمایت از افراد دارای اختلالات روانی را بررسی کرده‌اند. بسیاری از این آثار، بزه‌دیدگی کودکان دارای ADHD را به‌صورت مستقل موضوع اصلی قرار نداده‌اند.</p><p class="text-xs text-slate-500 dark:text-slate-400 mt-3">نمونه‌های مندرج در پایان‌نامه: حسینی و مصطفی‌پور (۱۳۹۶)، انصاری (۱۳۹۸)، فروتنی و احدی (۱۳۹۹)، اسفندی (۱۴۰۰).</p></article>
+        <article class="glass-card p-5 rounded-2xl"><div class="flex items-center gap-3 mb-3"><div class="p-3 rounded-xl bg-amber-500/10 text-amber-500"><i data-lucide="globe" class="w-5 h-5"></i></div><h3 class="font-bold">مطالعات خارجی</h3></div><p class="text-sm leading-7">بخشی از مطالعات به بزهکاری و تعامل با عدالت کیفری پرداخته‌اند؛ مطالعات دیگر، روابط همسالان، چندبزه‌دیدگی، قلدری و نیازهای کودکان در مصاحبه و فرایندهای قضایی را بررسی کرده‌اند. این شواهد در پایان‌نامه برای تحلیل عوامل فردی و محیطی و نقاط احتمالی مداخله استفاده شده‌اند.</p><p class="text-xs text-slate-500 dark:text-slate-400 mt-3">نمونه‌های مندرج در پایان‌نامه: مورـینسن و همکاران (۲۰۱۹)، هلستروم (۲۰۱۹)، کونیال (۲۰۲۰) و میکلوسی و کواچ (۲۰۲۵).</p></article>
+      </div>
+      <div class="glass-card p-5 rounded-2xl border-r-4 border-r-emerald-500"><h3 class="font-bold text-emerald-600 dark:text-emerald-400 mb-2">سهم و نوآوری قابل دفاع</h3><p class="text-sm leading-8">پژوهش حاضر بزهکاری و بزه‌دیدگی را جداگانه تحلیل می‌کند و سپس یافته‌های هر دو حوزه را با راهکارهای پیشگیرانه و حمایتی و ظرفیت‌های نظام ایران پیوند می‌دهد. ادعای پایان‌نامه، طرح نظریه جدید یا اثبات تجربی یک مدل نیست؛ ارزش آن در این چارچوب تحلیلی و تلفیقی است.</p></div>
+    </section>
+
+    <!-- 9. Delinquency findings -->
+    <section id="delinquency" class="section-shell py-10 section-anchor print-break">
+      <div class="text-center mb-8"><span class="px-3 py-1 bg-brand-500/10 text-brand-600 dark:text-brand-400 rounded-full font-bold text-xs inline-block mb-2">اسلاید ۹</span><h2 class="text-2xl sm:text-3xl font-extrabold">یافته‌های فصل دوم: زمینه‌ها و مسیرهای مرتبط با بزهکاری</h2></div>
+      <div class="rounded-3xl bg-gradient-to-l from-brand-900 via-brand-800 to-slate-900 text-white p-5 sm:p-6 mb-6 shadow-lg"><div class="flex items-start gap-3"><i data-lucide="git-branch" class="w-6 h-6 text-amber-300 shrink-0 mt-1"></i><div><h3 class="font-bold text-amber-200 mb-2">برداشت اصلی فصل</h3><p class="text-sm leading-8">برای تحلیل مسیر بزهکاری باید بین وضعیت بالینی، ویژگی روان‌شناختی، عامل خطر، مکانیسم و پیامد تمایز گذاشت. ویژگی‌هایی مانند تکانشگری ممکن است در بعضی شرایط اهمیت پیدا کنند، اما به‌تنهایی برای توضیح بزهکاری کافی نیستند.</p></div></div></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+        <article class="glass-card p-5 rounded-2xl"><h3 class="font-bold text-brand-600 dark:text-brand-400 mb-3 flex items-center gap-2"><i data-lucide="brain" class="w-5 h-5"></i>عوامل خطرآفرین فردی</h3><ul class="space-y-2 text-sm leading-7 list-disc pr-5"><li>تکانشگری و دشواری در کنترل بازداری.</li><li>برخی مشکلات عملکردهای اجرایی و خودتنظیمی.</li><li>دشواری احتمالی در تنظیم هیجان و تصمیم‌گیری.</li><li>تفاوت‌های فردی و نقش اختلالات همراه؛ این ویژگی‌ها در همه کودکان یکسان نیستند.</li></ul></article>
+        <article class="glass-card p-5 rounded-2xl"><h3 class="font-bold text-amber-600 dark:text-amber-400 mb-3 flex items-center gap-2"><i data-lucide="users" class="w-5 h-5"></i>عوامل خطرآفرین اجتماعی</h3><ul class="space-y-2 text-sm leading-7 list-disc pr-5"><li><strong>خانواده:</strong> کیفیت نظارت، رابطه والد ـ کودک و تعارض‌های احتمالی.</li><li><strong>مدرسه:</strong> مشکلات تحصیلی، طرد، ضعف پیوند با مدرسه و واکنش‌های برچسب‌زننده.</li><li><strong>همسالان:</strong> یادگیری رفتارهای پرخطر یا برخورداری از دوستی حمایتگر.</li><li><strong>محیط اجتماعی:</strong> فشارها، فرصت‌های رفتاری و دسترسی به حمایت.</li></ul></article>
+      </div>
+      <div class="glass-card p-5 sm:p-6 rounded-2xl"><h3 class="font-bold mb-4 flex items-center gap-2"><i data-lucide="layers" class="w-5 h-5 text-brand-500"></i>نظریه‌های اصلی تبیین بزهکاری در فصل دوم</h3><div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div class="p-4 rounded-xl bg-white/50 dark:bg-slate-800/50"><h4 class="font-bold text-sm mb-1">نظریه فشار عمومی ـ آگنیو</h4><p class="text-xs leading-6 text-slate-600 dark:text-slate-300">تحلیل فشارها و تجربه‌های منفی و نحوه واکنش به آن‌ها.</p></div>
+        <div class="p-4 rounded-xl bg-white/50 dark:bg-slate-800/50"><h4 class="font-bold text-sm mb-1">نظریه پیوند اجتماعی ـ هیرشی</h4><p class="text-xs leading-6 text-slate-600 dark:text-slate-300">توجه به پیوندهای کودک با خانواده، مدرسه و نهادهای متعارف.</p></div>
+        <div class="p-4 rounded-xl bg-white/50 dark:bg-slate-800/50"><h4 class="font-bold text-sm mb-1">نظریه یادگیری اجتماعی ـ آکرز</h4><p class="text-xs leading-6 text-slate-600 dark:text-slate-300">بررسی الگوبرداری و تقویت رفتار در تعاملات اجتماعی.</p></div>
+        <div class="p-4 rounded-xl bg-white/50 dark:bg-slate-800/50"><h4 class="font-bold text-sm mb-1">رویکرد تحولی ـ مافیت</h4><p class="text-xs leading-6 text-slate-600 dark:text-slate-300">توجه به زمان شروع، تداوم و تغییر مسیر رفتار در طول رشد.</p></div>
+      </div></div>
+      <p class="text-sm leading-8 mt-4">جمع‌بندی: مسیرهای مرتبط با بزهکاری، چندعاملی و احتمالی‌اند؛ هدف پیشگیری، شناسایی عوامل تغییرپذیر و نقاط مناسب مداخله است، نه پیش‌بینی آینده کیفری بر اساس تشخیص.</p>
+    </section>
+
+    <!-- 10. Delinquency prevention -->
+    <section id="delinquency-solutions" class="section-shell py-10 section-anchor">
+      <div class="text-center mb-8"><span class="px-3 py-1 bg-brand-500/10 text-brand-600 dark:text-brand-400 rounded-full font-bold text-xs inline-block mb-2">اسلاید ۱۰</span><h2 class="text-2xl sm:text-3xl font-extrabold">راهکارهای پیشگیری از بزهکاری بر اساس سطح مداخله</h2></div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <article class="glass-card p-5 rounded-2xl"><div class="p-2.5 rounded-xl bg-brand-500/10 text-brand-500 w-fit mb-3"><i data-lucide="user-round" class="w-5 h-5"></i></div><h3 class="font-bold mb-2">۱. سطح فردی</h3><p class="text-sm leading-7">شناسایی سازوکار خطر در کودک مشخص و انتخاب حمایت متناسب با نیاز واقعی او؛ توجه به خودتنظیمی، کنترل بازداری یا تنظیم هیجان در صورت ارتباط با نیاز کودک.</p></article>
+        <article class="glass-card p-5 rounded-2xl"><div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-500 w-fit mb-3"><i data-lucide="house" class="w-5 h-5"></i></div><h3 class="font-bold mb-2">۲. سطح خانواده</h3><p class="text-sm leading-7">ایجاد ساختار منظم و قابل پیش‌بینی، تقویت حمایت و نظارت متناسب، کاهش چرخه تعارض و همکاری با مدرسه و خدمات تخصصی.</p></article>
+        <article class="glass-card p-5 rounded-2xl"><div class="p-2.5 rounded-xl bg-amber-500/10 text-amber-500 w-fit mb-3"><i data-lucide="school" class="w-5 h-5"></i></div><h3 class="font-bold mb-2">۳. مدرسه و همسالان</h3><p class="text-sm leading-7">حمایت آموزشی و رفتاری، حفظ پیوند کودک با مدرسه، مقابله با طرد و برچسب‌زنی و افزایش فرصت ارتباط با همسالان حمایتگر.</p></article>
+        <article class="glass-card p-5 rounded-2xl"><div class="p-2.5 rounded-xl bg-purple-500/10 text-purple-500 w-fit mb-3"><i data-lucide="building-2" class="w-5 h-5"></i></div><h3 class="font-bold mb-2">۴. سطح اجتماعی</h3><p class="text-sm leading-7">دسترسی به حمایت‌ها و خدمات و توجه به شرایط محیطی و فرصت‌های رفتاری قابل تغییر.</p></article>
+        <article class="glass-card p-5 rounded-2xl sm:col-span-2"><div class="p-2.5 rounded-xl bg-rose-500/10 text-rose-500 w-fit mb-3"><i data-lucide="scale" class="w-5 h-5"></i></div><h3 class="font-bold mb-2">۵. سطح نهادی و عدالت کیفری</h3><p class="text-sm leading-7">ارزیابی وضعیت کودک به‌جای اتکا به برچسب تشخیصی، پرهیز از تشدید غیرضروری مسیر کیفری و پیوند دادن شناسایی به ارجاع و حمایت متناسب. اجرای این جهت‌گیری باید در چارچوب قانون و صلاحیت نهادهای مربوط بررسی شود.</p></article>
+      </div>
+      <div class="mt-5 p-4 rounded-2xl bg-brand-500/10 border border-brand-500/20 text-sm leading-7"><strong>نکته کلیدی:</strong> شناسایی زودهنگام وقتی ارزش پیشگیرانه دارد که به ارزیابی تخصصی، امکان ارجاع و تداوم حمایت منتهی شود.</div>
+    </section>
+
+    <!-- 11. Victimization findings -->
+    <section id="victimization" class="section-shell py-10 section-anchor print-break">
+      <div class="text-center mb-8"><span class="px-3 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full font-bold text-xs inline-block mb-2">اسلاید ۱۱</span><h2 class="text-2xl sm:text-3xl font-extrabold">یافته‌های فصل سوم: زمینه‌ها و موقعیت‌های بزه‌دیدگی</h2></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+        <article class="glass-card p-5 rounded-2xl border-t-4 border-t-rose-500"><h3 class="font-bold mb-2 flex items-center gap-2"><i data-lucide="users" class="w-5 h-5 text-rose-500"></i>قلدری و روابط همسالان</h3><p class="text-sm leading-7">پایان‌نامه قلدری را از تعارض عادی همسالان تفکیک می‌کند. در بخش مربوط، آسیب‌رسانی، عدم توازن قدرت و تکرار/استمرار به‌عنوان وجوه مهم تمایز مطرح شده‌اند.</p></article>
+        <article class="glass-card p-5 rounded-2xl border-t-4 border-t-purple-500"><h3 class="font-bold mb-2 flex items-center gap-2"><i data-lucide="smartphone" class="w-5 h-5 text-purple-500"></i>قلدری سایبری و محیط دیجیتال</h3><p class="text-sm leading-7">آسیب می‌تواند در فضای مجازی ادامه پیدا کند یا بازنشر شود؛ بنابراین امکان گزارش، واکنش بزرگسالان و پیگیری وضعیت کودک اهمیت دارند.</p></article>
+        <article class="glass-card p-5 rounded-2xl border-t-4 border-t-amber-500"><h3 class="font-bold mb-2 flex items-center gap-2"><i data-lucide="house" class="w-5 h-5 text-amber-500"></i>کودک‌آزاری، غفلت و سایر آسیب‌ها</h3><p class="text-sm leading-7">بزه‌دیدگی به قلدری محدود نیست و باید خانواده، مدرسه، جامعه و دیگر موقعیت‌هایی که کودک در آن‌ها قرار می‌گیرد بررسی شوند. امکان چندبزه‌دیدگی نیز باید از نظر دور نماند.</p></article>
+        <article class="glass-card p-5 rounded-2xl border-t-4 border-t-brand-500"><h3 class="font-bold mb-2 flex items-center gap-2"><i data-lucide="messages-square" class="w-5 h-5 text-brand-500"></i>بزه‌دیدگی ثانویه</h3><p class="text-sm leading-7">واکنش نامناسب نهادها، پرسش‌های نامتناسب یا تکرار غیرضروری بیان تجربه ممکن است فشار و آسیب کودک را افزایش دهد؛ ازاین‌رو، نحوه مواجهه رسمی بخشی از مسئله حمایت است.</p></article>
+      </div>
+      <div class="glass-card p-5 sm:p-6 rounded-2xl"><h3 class="font-bold mb-4">چارچوب‌های نظری بزه‌دیدگی</h3><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="p-4 rounded-xl bg-white/50 dark:bg-slate-800/50"><h4 class="font-bold text-sm text-amber-600 dark:text-amber-400 mb-2">نظریه شتاب‌دهندگی بزه‌دیدگی</h4><p class="text-sm leading-7">برای بررسی احتمالی تعامل ویژگی‌های فردی و موقعیت؛ با تأکید بر آنکه این چارچوب نباید به سرزنش قربانی یا انتقال مسئولیت جرم به کودک منتهی شود.</p></div><div class="p-4 rounded-xl bg-white/50 dark:bg-slate-800/50"><h4 class="font-bold text-sm text-brand-600 dark:text-brand-400 mb-2">رویکرد فعالیت‌های روزمره</h4><p class="text-sm leading-7">برای تحلیل نقش موقعیت، فرصت، نظارت و شرایط پیرامونی در بروز یا کاهش فرصت‌های بزه‌دیدگی.</p></div></div></div>
+      <p class="text-sm leading-8 mt-4">جمع‌بندی: ویژگی‌های کودک علت قطعی قربانی‌شدن نیستند و مسئولیت پیشگیری و حمایت نباید بر عهده کودک گذاشته شود. موقعیت واقعی، میزان نظارت، محیط و کیفیت حمایت باید بررسی شوند.</p>
+    </section>
+
+    <!-- 12. Victimization prevention -->
+    <section id="victimization-solutions" class="section-shell py-10 section-anchor">
+      <div class="text-center mb-8"><span class="px-3 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full font-bold text-xs inline-block mb-2">اسلاید ۱۲</span><h2 class="text-2xl sm:text-3xl font-extrabold">راهکارهای پیشگیری از بزه‌دیدگی و حمایت از کودک</h2></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <article class="glass-card p-5 rounded-2xl flex gap-3"><div class="p-2 rounded-xl bg-brand-500/10 text-brand-500 h-fit"><i data-lucide="user-round" class="w-5 h-5"></i></div><div><h3 class="font-bold mb-2">۱. سطح فردی و مهارتی</h3><p class="text-sm leading-7">شناخت نیاز واقعی کودک و تقویت مهارت‌های متناسب با وضعیت او، بدون تبدیل تشخیص به برچسب خطرناک‌بودن.</p></div></article>
+        <article class="glass-card p-5 rounded-2xl flex gap-3"><div class="p-2 rounded-xl bg-emerald-500/10 text-emerald-500 h-fit"><i data-lucide="house" class="w-5 h-5"></i></div><div><h3 class="font-bold mb-2">۲. سطح خانواده</h3><p class="text-sm leading-7">رابطه امن، نظارت مناسب، امکان بیان تجربه آسیب‌زا و واکنش درست به گزارش کودک.</p></div></article>
+        <article class="glass-card p-5 rounded-2xl flex gap-3"><div class="p-2 rounded-xl bg-amber-500/10 text-amber-500 h-fit"><i data-lucide="school" class="w-5 h-5"></i></div><div><h3 class="font-bold mb-2">۳. مدرسه و همسالان</h3><p class="text-sm leading-7">مقابله با قلدری و طرد، ایجاد امکان گزارش، حمایت آموزشی و تقویت روابط سازگارانه و حمایتگر.</p></div></article>
+        <article class="glass-card p-5 rounded-2xl flex gap-3"><div class="p-2 rounded-xl bg-purple-500/10 text-purple-500 h-fit"><i data-lucide="shield" class="w-5 h-5"></i></div><div><h3 class="font-bold mb-2">۴. سطح اجتماعی، محیطی و دیجیتال</h3><p class="text-sm leading-7">کاهش موقعیت‌های خطر، آموزش استفاده ایمن از فضای دیجیتال و فراهم کردن امکان گزارش و پیگیری آسیب.</p></div></article>
+        <article class="glass-card p-5 rounded-2xl flex gap-3 md:col-span-2"><div class="p-2 rounded-xl bg-rose-500/10 text-rose-500 h-fit"><i data-lucide="scale" class="w-5 h-5"></i></div><div><h3 class="font-bold mb-2">۵. سطح حمایتی و عدالت کیفری</h3><p class="text-sm leading-7">در ارتباط با کودک در مقام بزه‌دیده، شاهد، شاکی یا مطلع، استفاده از زبان روشن، اختصاص زمان کافی برای پاسخ، آموزش کارکنان، پرهیز از تکرار غیرضروری بیان تجربه و استمرار حمایت پس از واکنش اولیه اهمیت دارد.</p></div></article>
+      </div>
+    </section>
+
+    <!-- 13. Legal and institutional capacity -->
+    <section id="capacity" class="section-shell py-10 section-anchor print-break">
+      <div class="text-center mb-8"><span class="px-3 py-1 bg-brand-500/10 text-brand-600 dark:text-brand-400 rounded-full font-bold text-xs inline-block mb-2">اسلاید ۱۳ ـ ظرفیت‌های نظام ایران</span><h2 class="text-2xl sm:text-3xl font-extrabold">ظرفیت‌ها، کاستی‌ها و ملاحظه سیاست جنایی</h2></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <article class="glass-card p-5 rounded-2xl"><h3 class="font-bold text-emerald-600 dark:text-emerald-400 mb-3 flex items-center gap-2"><i data-lucide="shield-check" class="w-5 h-5"></i>ظرفیت‌های قابل بررسی</h3><ul class="space-y-2 text-sm leading-7 list-disc pr-5"><li>قواعد مربوط به اطفال و نوجوانان و تصمیم‌های افتراقی در محدوده مقرر قانونی.</li><li>ظرفیت حمایتی قانون حمایت از اطفال و نوجوانان مصوب ۱۳۹۹ درباره وضعیت مخاطره‌آمیز و اقدام برای کاهش آسیب.</li><li>امکان ارزیابی تخصصی و ارجاع متناسب با وضعیت واقعی کودک.</li><li>امکان تقویت ارتباط خانواده، مدرسه، خدمات تخصصی و نهادهای رسمی.</li></ul></article>
+        <article class="glass-card p-5 rounded-2xl"><h3 class="font-bold text-amber-600 dark:text-amber-400 mb-3 flex items-center gap-2"><i data-lucide="search-check" class="w-5 h-5"></i>کاستی‌هایی که باید تفکیک شوند</h3><ul class="space-y-2 text-sm leading-7 list-disc pr-5"><li>کاستی احتمالی در متن قانون.</li><li>ابهام یا مشکل در تفسیر حقوقی.</li><li>مشکل در اجرا، آموزش یا رویه‌های عملی.</li><li>ضعف هماهنگی میان نهادهای مسئول و استمرار ارجاع و حمایت.</li></ul></article>
+      </div>
+      <div class="mt-5 p-5 rounded-2xl bg-slate-100 dark:bg-slate-800/70"><p class="text-sm leading-8"><strong>نتیجه سیاستی:</strong> پیش از پیشنهاد اصلاح قانون باید روشن شود مسئله از متن قانون ناشی می‌شود یا از تفسیر، اجرا، عملکرد نهادها و ضعف هماهنگی. بر اساس پایان‌نامه، صرف تشخیص ADHD مبنای ایجاد آثار حقوقی خودکار نیست؛ تمرکز اصلی بر ارزیابی فردی و حمایت متناسب است.</p></div>
+    </section>
+
+    <!-- 14. Answers and conclusion -->
+    <section id="answers" class="section-shell py-10 section-anchor">
+      <div class="text-center mb-8"><span class="px-3 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full font-bold text-xs inline-block mb-2">اسلاید ۱۴</span><h2 class="text-2xl sm:text-3xl font-extrabold">پاسخ مستقیم به پرسش‌ها و نتیجه‌گیری</h2></div>
+      <div class="glass-card rounded-3xl overflow-hidden mb-6"><div class="overflow-x-auto"><table class="w-full text-sm"><thead class="bg-emerald-500/10"><tr><th class="p-4 text-right">پرسش</th><th class="p-4 text-right">پاسخ مستخرج از تحلیل پایان‌نامه</th></tr></thead><tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+        <tr><td class="p-4 font-semibold min-w-44">پرسش فرعی اول: بزهکاری</td><td class="p-4 leading-8">ویژگی‌های فردی مانند تکانشگری و دشواری در خودتنظیمی، در تعامل با خانواده، مدرسه، همسالان و محیط اجتماعی، ممکن است در مسیرهای احتمالی بزهکاری نقش داشته باشند. پیشگیری باید بر عوامل تغییرپذیر و نقاط مناسب مداخله تمرکز کند.</td></tr>
+        <tr><td class="p-4 font-semibold">پرسش فرعی دوم: بزه‌دیدگی</td><td class="p-4 leading-8">موقعیت‌های بزه‌دیدگی به شرایط فردی محدود نیستند؛ خانواده، مدرسه، روابط همسالان، محیط دیجیتال، نظارت، امکان گزارش و واکنش نهادها هم اهمیت دارند. حمایت باید از آسیب اولیه تا جلوگیری از بزه‌دیدگی ثانویه و استمرار حمایت را دربرگیرد.</td></tr>
+        <tr><td class="p-4 font-semibold">پرسش فرعی سوم: راهکارها</td><td class="p-4 leading-8">شناسایی و ارجاع زودهنگام، حمایت فردمحور، تقویت خانواده و مدرسه، روابط سالم همسالان، کاهش موقعیت‌های خطر در فضای دیجیتال، حمایت متناسب در فرایند رسمی و هماهنگی نهادی.</td></tr>
+        <tr><td class="p-4 font-semibold">پرسش اصلی</td><td class="p-4 leading-8">راهکار پیشگیرانه و حمایتی باید بر اساس نیاز واقعی هر کودک، عوامل فردی و محیطی و ظرفیت‌های حقوقی و نهادی ایران طراحی شود؛ نه صرفاً بر پایه تشخیص اختلال یا واکنش کیفری.</td></tr>
+      </tbody></table></div></div>
+      <h3 class="font-bold text-lg mb-4">پنج نتیجه کلیدی</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <article class="glass-card p-4 rounded-2xl"><span class="text-brand-600 dark:text-brand-400 font-black text-xl">۰۱</span><h4 class="font-bold mt-2 mb-1">رابطه چندعاملی است</h4><p class="text-sm leading-7">تشخیص اختلال به‌تنهایی بزهکاری یا بزه‌دیدگی را تعیین نمی‌کند.</p></article>
+        <article class="glass-card p-4 rounded-2xl"><span class="text-brand-600 dark:text-brand-400 font-black text-xl">۰۲</span><h4 class="font-bold mt-2 mb-1">دو محور متمایز</h4><p class="text-sm leading-7">بزهکاری و بزه‌دیدگی باید جداگانه بررسی شوند، هرچند گاه هم‌پوشانی دارند.</p></article>
+        <article class="glass-card p-4 rounded-2xl"><span class="text-brand-600 dark:text-brand-400 font-black text-xl">۰۳</span><h4 class="font-bold mt-2 mb-1">پیشگیری فردمحور است</h4><p class="text-sm leading-7">نیاز هر کودک و عوامل قابل تغییر باید مبنای انتخاب حمایت باشند.</p></article>
+        <article class="glass-card p-4 rounded-2xl"><span class="text-brand-600 dark:text-brand-400 font-black text-xl">۰۴</span><h4 class="font-bold mt-2 mb-1">حمایت باید استمرار یابد</h4><p class="text-sm leading-7">پیشگیری از آسیب ثانویه و پیگیری پس از مداخله اولیه اهمیت دارد.</p></article>
+        <article class="glass-card p-4 rounded-2xl"><span class="text-brand-600 dark:text-brand-400 font-black text-xl">۰۵</span><h4 class="font-bold mt-2 mb-1">پاسخ حقوقی متناسب</h4><p class="text-sm leading-7">پیش از اصلاح قانون باید نوع کاستی ـ تقنینی، تفسیری، اجرایی یا نهادی ـ روشن شود.</p></article>
+      </div>
+    </section>
+
+    <!-- Recommendations, limitations, future -->
+    <section id="recommendations" class="section-shell py-10 section-anchor print-break">
+      <div class="text-center mb-8"><span class="px-3 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full font-bold text-xs inline-block mb-2">اسلاید ۱۵ ـ پیشنهادها و محدودیت‌ها</span><h2 class="text-2xl sm:text-3xl font-extrabold">پیشنهادهای حاصل از پژوهش، محدودیت‌ها و مسیر آینده</h2></div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
+        <article class="glass-card p-5 sm:p-6 rounded-2xl"><h3 class="font-bold text-emerald-600 dark:text-emerald-400 mb-4 flex items-center gap-2"><i data-lucide="list-checks" class="w-5 h-5"></i>پیشنهادهای حاصل از پژوهش</h3><ol class="list-decimal pr-5 space-y-2 text-sm leading-7"><li>تقویت شناسایی زودهنگام، ارزیابی تخصصی و ارجاع حمایتی.</li><li>طراحی مداخلات متناسب با وضعیت و نیاز هر کودک.</li><li>تقویت حمایت خانواده و آموزش والدین.</li><li>تقویت نقش حمایتی مدرسه و پیشگیری از برچسب‌زنی و طرد.</li><li>تقویت روابط حمایتگر همسالان.</li><li>تقویت امکان گزارش و حمایت در محیط دیجیتال.</li><li>آموزش کارکنان و مناسب‌سازی ارتباط در تحقیق و دادرسی.</li><li>پیشگیری از بزه‌دیدگی ثانویه و تداوم حمایت.</li><li>تقویت هماهنگی میان خانواده، مدرسه، خدمات تخصصی و عدالت کیفری.</li><li>تشخیص نوع کاستی حقوقی و انتخاب پاسخ مناسب پیش از پیشنهاد اصلاح قانون.</li></ol></article>
+        <article class="glass-card p-5 sm:p-6 rounded-2xl"><h3 class="font-bold text-amber-600 dark:text-amber-400 mb-4 flex items-center gap-2"><i data-lucide="alert-triangle" class="w-5 h-5"></i>محدودیت‌های پژوهش</h3><ul class="list-disc pr-5 space-y-2 text-sm leading-7"><li>ماهیت اسنادی و نبود داده میدانی اختصاصی.</li><li>سنجیده نشدن تجربی اثربخشی راهکارهای پیشگیرانه.</li><li>نیاز به بررسی تخصصی بیشتر در برخی موضوعات حقوقی، نهادی و رویه‌ای.</li><li>محدودیت نسبی منابع اختصاصی درباره همه انواع بزه‌دیدگی این کودکان.</li><li>لزوم تفسیر جمع‌بندی‌ها در حدود شواهد موجود.</li></ul></article>
+      </div>
+      <article class="glass-card p-5 sm:p-6 rounded-2xl"><h3 class="font-bold text-brand-600 dark:text-brand-400 mb-3 flex items-center gap-2"><i data-lucide="telescope" class="w-5 h-5"></i>پیشنهادهای پژوهشی آینده</h3><div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm leading-7"><p class="p-3 rounded-xl bg-white/50 dark:bg-slate-800/50">مطالعات میدانی و چندمنبعی با حضور گروه‌های مرتبط.</p><p class="p-3 rounded-xl bg-white/50 dark:bg-slate-800/50">مطالعات طولی درباره مسیرهای بزهکاری و بزه‌دیدگی.</p><p class="p-3 rounded-xl bg-white/50 dark:bg-slate-800/50">مطالعه تفاوت‌های فردی و نیازهای متفاوت کودکان.</p><p class="p-3 rounded-xl bg-white/50 dark:bg-slate-800/50">ارزیابی تجربی برنامه‌های فردی، خانوادگی، مدرسه‌ای و رویه‌ای.</p><p class="p-3 rounded-xl bg-white/50 dark:bg-slate-800/50">مطالعات اختصاصی درباره چندبزه‌دیدگی و آسیب‌های محیط دیجیتال.</p><p class="p-3 rounded-xl bg-white/50 dark:bg-slate-800/50">بررسی رویه‌های رسمی، قوانین، اجرا و امکان‌سنجی عملی راهکارها.</p></div></article>
+    </section>
+
+    <!-- Final message -->
+    <section id="closing" class="section-shell py-10 section-anchor">
+      <div class="rounded-3xl bg-gradient-to-br from-brand-950 via-brand-900 to-slate-900 text-white p-7 sm:p-10 text-center shadow-2xl glow-effect">
+        <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-5"><i data-lucide="heart-handshake" class="w-7 h-7 text-amber-300"></i></div>
+        <p class="text-xs sm:text-sm text-brand-200 mb-3">پیام نهایی و سیاستی پژوهش</p>
+        <h2 class="text-xl sm:text-3xl font-black leading-relaxed mb-5">پیشگیری مؤثر، از شناخت نیاز واقعی کودک و محیط زندگی او آغاز می‌شود.</h2>
+        <p class="text-sm sm:text-base leading-8 text-slate-200 max-w-4xl mx-auto">راهکارهای پیشگیرانه و حمایتی باید فردمحور و چندسطحی باشند؛ خانواده، مدرسه و روابط همسالان را دربرگیرند؛ به موقعیت‌های خطر در محیط حقیقی و دیجیتال توجه کنند؛ حمایت را در فرایندهای رسمی و پس از مداخله ادامه دهند؛ و بر ظرفیت‌های حقوقی و نهادی ایران تکیه کنند. تشخیص ADHD به‌تنهایی مبنای پیش‌بینی بزهکاری، بزه‌دیدگی یا نتیجه حقوقی خودکار نیست.</p>
+        <div class="mt-7 pt-6 border-t border-white/15"><p class="font-bold">با سپاس و احترام از توجه استادان محترم داور و حاضران گرامی</p><p class="text-xs text-slate-300 mt-2">آماده پاسخ‌گویی به پرسش‌ها و بهره‌مندی از دیدگاه‌های ارزشمند شما هستم.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 py-8 text-center text-xs border-t border-slate-800 mt-6">
+    <p class="text-white font-bold text-sm mb-1">محدثه طالبی‌پور چرخابی</p>
+    <p>جلسه دفاع پایان‌نامه کارشناسی ارشد حقوق جزا و جرم‌شناسی • دانشگاه شاهد • مهرماه ۱۴۰۵</p>
+    <p class="mt-3 text-slate-500">محتوا بر اساس متن پایان‌نامه تنظیم شده است؛ راهکارها در این پژوهش به‌صورت تجربی آزموده نشده‌اند.</p>
+    <div class="mt-4 flex flex-wrap justify-center gap-3 no-print"><button onclick="window.print()" class="px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">چاپ / ذخیره به PDF</button><button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="px-4 py-2 rounded-xl bg-slate-800 text-white hover:bg-slate-700">بازگشت به بالا</button></div>
+  </footer>
+
+  <script>
+    if (window.lucide) lucide.createIcons();
+    window.addEventListener('scroll', function () {
+      const top = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      document.getElementById('progressBar').style.width = (height > 0 ? top / height * 100 : 0) + '%';
+    });
+    function toggleDarkMode() { document.documentElement.classList.toggle('dark'); }
+    function toggleSearch() {
+      const modal = document.getElementById('searchModal');
+      const opening = modal.classList.contains('hidden');
+      modal.classList.toggle('hidden', !opening);
+      modal.classList.toggle('flex', opening);
+      if (opening) document.getElementById('searchInput').focus();
+    }
+    function filterContent() {
+      const query = document.getElementById('searchInput').value.trim().toLocaleLowerCase('fa');
+      const results = document.getElementById('searchResults');
+      results.innerHTML = '';
+      if (!query) return;
+      const candidates = document.querySelectorAll('main h1, main h2, main h3, main h4, main p, main li, main td');
+      let matches = 0;
+      candidates.forEach(function (el) {
+        if (matches >= 10 || !el.textContent.toLocaleLowerCase('fa').includes(query)) return;
+        const section = el.closest('section, header');
+        const item = document.createElement('button');
+        item.type = 'button';
+        item.className = 'block w-full text-right p-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-brand-500/10 leading-6';
+        item.textContent = (el.textContent.trim().replace(/\s+/g, ' ').slice(0, 160)) + (el.textContent.trim().length > 160 ? '…' : '');
+        item.addEventListener('click', function () {
+          if (section) section.scrollIntoView({behavior:'smooth', block:'start'});
+          toggleSearch();
+        });
+        results.appendChild(item);
+        matches++;
+      });
+      if (!matches) {
+        const empty = document.createElement('p');
+        empty.className = 'text-slate-500 p-3';
+        empty.textContent = 'موردی پیدا نشد.';
+        results.appendChild(empty);
+      }
+    }
+    function toggleFocusMode() {
+      document.body.classList.toggle('presenter-mode');
+      const active = document.body.classList.contains('presenter-mode');
+      const button = document.querySelector('[aria-label="حالت ارائه"]');
+      if (button) button.title = active ? 'خروج از حالت ارائه' : 'حالت ارائه';
+    }
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('searchModal');
+        modal.classList.add('hidden'); modal.classList.remove('flex');
+      }
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); toggleSearch(); }
+    });
+  </script>
+</body>
+</html>
